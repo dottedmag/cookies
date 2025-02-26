@@ -1,22 +1,3 @@
-// Package cookies implements cookies as close as possible to how they should
-// have been specified in the first place
-//
-// Intent describes programmer's intent of declaring a cookie:
-//
-//	cookie, err := cookies.Compile(cookies.Intent{
-//	  Name: "__Host-ID",
-//	  Value: "12345",
-//	  Expires: cookies.ExpiresAfter(24*time.Hour),
-//	})
-//
-// This will create a cookie with secure defaults:
-// - scoped to the current domain (not revealed to subdomains) and https-only
-// - with default cross-site Cookie setting (allow cross-site requests only on navigation)
-// - not revealed to JavaScript
-//
-// To reveal cookie to JavaScript, add RevealToJavaScript: true.
-//
-// For other customizations, see the documentation for Intent struct.
 package cookies
 
 import (
