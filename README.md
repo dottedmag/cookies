@@ -3,11 +3,11 @@
 
 `cookies.Intent` describes programmer's intent of declaring a cookie:
 
-    cookie := cookies.Compile(cookies.Intent{
+    cookie, err := cookies.Compile(cookies.Intent{
         Name: "__Host-ID",
         Value: "12345",
         Expires: cookies.ExpiresAfter(24*time.Hour),
-    }
+    })
 
 This will create a cookie with secure defaults:
  - scoped to the current domain (not revealed to subdomains) and https-only
