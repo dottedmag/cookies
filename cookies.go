@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-// Source describes allowed request sources for browser to send a cookie
+// Source describes allowed request sources for a browser to send a cookie
 type Source string
 
 // Source values directly correspond to SameSite cookie attributes, but have
@@ -129,7 +129,7 @@ func Compile(i Intent) (*http.Cookie, error) {
 		maxAge = int(i.Expires.After.Seconds())
 	case i.Expires.Session:
 	default:
-		return nil, fmt.Errorf("At least one of WhenUAIsClosed, At, After, or Immediately need to be set")
+		return nil, fmt.Errorf("At least one of WhenUAIsClosed, At, After, or Immediately needs to be set")
 	}
 
 	if strings.HasPrefix(i.Name, "__Secure-") && !secure {

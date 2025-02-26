@@ -1,7 +1,7 @@
 # Go library for declaring cookies by programmer's intent
 [![Go Reference](https://pkg.go.dev/badge/github.com/dottedmag/cookies.svg)](https://pkg.go.dev/github.com/dottedmag/cookies)
 
-`cookies.Intent` describes programmer's intent of declaring a cookie:
+`cookies.Intent` describes programmer's intent when declaring a cookie:
 
     cookie, err := cookies.Compile(cookies.Intent{
         Name: "__Host-ID",
@@ -14,9 +14,9 @@ This will create a cookie with secure defaults:
  - with default cross-site Cookie setting (allow cross-site requests only on navigation)
  - not revealed to JavaScript
 
-To reveal cookie to JavaScript, add `RevealToJavaScript: true`.
+To reveal the cookie to JavaScript, add `RevealToJavaScript: true`.
 
-For other customizations, see the documentation for `Intent` struct.
+For other customizations, see the documentation for the `Intent` struct.
 
 ## Legal
 
