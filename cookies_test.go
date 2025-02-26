@@ -218,7 +218,7 @@ func TestCompile(t *testing.T) {
 			Name:     "expired-cookie",
 			Value:    "value",
 			Path:     "/",
-			MaxAge:   0,
+			MaxAge:   -1,
 			Secure:   true,
 			HttpOnly: true,
 			SameSite: http.SameSiteLaxMode,

@@ -59,7 +59,7 @@ func After(d time.Duration) Expiration {
 
 // Immediately creates immediate expiration
 func Immediately() Expiration {
-	return Expiration{After: -1}
+	return Expiration{After: -time.Second}
 }
 
 // Intent is a description of a browser cookie.
